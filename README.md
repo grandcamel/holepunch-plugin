@@ -84,8 +84,10 @@ holepunch-plugin/
 │               ├── references/
 │               ├── examples/
 │               └── scripts/
+├── CLAUDE.md                 # Development guidelines
 ├── README.md
-└── LICENSE
+├── LICENSE
+└── VERSION                   # Semver version tracking
 ```
 
 ## Examples

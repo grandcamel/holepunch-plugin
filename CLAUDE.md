@@ -20,9 +20,10 @@ holepunch-plugin/
 │               ├── references/  # API documentation
 │               ├── examples/    # Working code examples
 │               └── scripts/     # Utility scripts
-├── README.md
+├── CLAUDE.md                    # Development guidelines
+├── README.md                    # User documentation
 ├── LICENSE
-└── VERSION
+└── VERSION                      # Semver version tracking
 ```
 
 ## Development Guidelines
