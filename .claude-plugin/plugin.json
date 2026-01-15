@@ -1,0 +1,18 @@
+{
+  "name": "holepunch",
+  "version": "1.0.0",
+  "description": "Build zero-infrastructure P2P applications with Holepunch ecosystem (Pear, Hypercore, Hyperswarm)",
+  "author": {
+    "name": "Jason Krueger"
+  },
+  "keywords": [
+    "p2p",
+    "peer-to-peer",
+    "holepunch",
+    "pear",
+    "hypercore",
+    "hyperswarm",
+    "hyperdrive",
+    "hyperbee"
+  ]
+}
