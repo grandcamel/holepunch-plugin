@@ -269,11 +269,11 @@ For detailed information, consult these files in the skill directory:
 
 ## Example Files
 
-Working examples at `${CLAUDE_PLUGIN_ROOT}/examples/`:
+Working examples in the skill's `examples/` directory:
 
-- **`hyperswarm-basic.js`** - Simple peer discovery and messaging
-- **`hypercore-replication.js`** - Data sharing between peers
-- **`hyperdrive-files.js`** - P2P file sharing
+- **`examples/hyperswarm-basic.js`** - Simple peer discovery and messaging
+- **`examples/hypercore-replication.js`** - Data sharing between peers
+- **`examples/hyperdrive-files.js`** - P2P file sharing
 
 ## Commands
 
@@ -285,9 +285,9 @@ Use these plugin commands for quick actions:
 
 ## Scripts
 
-Utility scripts at `${CLAUDE_PLUGIN_ROOT}/scripts/`:
+Utility scripts in the skill's `scripts/` directory:
 
-- **`scaffold-pear.sh`** - Scaffold new Pear desktop or terminal app
+- **`scripts/scaffold-pear.sh`** - Scaffold new Pear desktop or terminal app
 
 ## Specialized Agents
 
