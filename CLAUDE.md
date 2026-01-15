@@ -1,25 +1,38 @@
-# Holepunch P2P Development Plugin
+# Holepunch P2P Development Marketplace
 
-Claude Code plugin for building zero-infrastructure P2P applications with the Holepunch ecosystem.
+Claude Code marketplace providing plugins for building zero-infrastructure P2P applications with the Holepunch ecosystem.
 
 ## Project Structure
 
 ```
-holepunch-dev/
-├── .claude-plugin/plugin.json   # Plugin manifest
-├── commands/                     # Slash commands
-├── agents/                       # Specialized agents
-├── skills/holepunch/            # Main skill + references
-├── examples/                     # Working code examples
-└── scripts/                      # Utility scripts
+holepunch-plugin/
+├── .claude-plugin/
+│   └── marketplace.json         # Marketplace metadata
+├── plugins/
+│   └── holepunch/               # Main plugin
+│       ├── .claude-plugin/
+│       │   └── plugin.json      # Plugin metadata
+│       ├── agents/              # Proactive agents
+│       ├── commands/            # Slash commands
+│       └── skills/
+│           └── holepunch/       # P2P development skill
+│               ├── SKILL.md
+│               ├── references/  # API documentation
+│               ├── examples/    # Working code examples
+│               └── scripts/     # Utility scripts
+├── README.md
+├── LICENSE
+└── VERSION
 ```
 
 ## Development Guidelines
 
 ### Versioning
 
-- Version is tracked in `VERSION` file (semver.org format)
-- Also update `.claude-plugin/plugin.json` version field when releasing
+Version is tracked in three places (keep in sync):
+- `VERSION` file (semver.org format)
+- `.claude-plugin/marketplace.json` → `metadata.version` and `plugins[].version`
+- `plugins/holepunch/.claude-plugin/plugin.json` → `version`
 
 ### Commit Messages
 
@@ -34,7 +47,11 @@ Use conventional commits:
 
 Test plugin locally:
 ```bash
-claude --plugin-dir /path/to/holepunch-dev
+# Test the plugin directly
+claude --plugin-dir ./plugins/holepunch
+
+# Or test via marketplace
+claude --plugin-dir .
 ```
 
 ### Component Conventions
@@ -48,7 +65,18 @@ claude --plugin-dir /path/to/holepunch-dev
 
 | File | Purpose |
 |------|---------|
-| `skills/holepunch/SKILL.md` | Main skill with module guide |
-| `skills/holepunch/references/` | Detailed API documentation |
-| `commands/*.md` | User-invocable slash commands |
-| `agents/*.md` | Proactive specialized agents |
+| `.claude-plugin/marketplace.json` | Marketplace definition |
+| `plugins/holepunch/.claude-plugin/plugin.json` | Plugin metadata |
+| `plugins/holepunch/skills/holepunch/SKILL.md` | Main skill |
+| `plugins/holepunch/skills/holepunch/references/` | API documentation |
+| `plugins/holepunch/commands/*.md` | Slash commands |
+| `plugins/holepunch/agents/*.md` | Proactive agents |
+
+## Adding New Plugins
+
+To add another plugin to this marketplace:
+
+1. Create `plugins/<plugin-name>/.claude-plugin/plugin.json`
+2. Add plugin components (commands, agents, skills)
+3. Register in `.claude-plugin/marketplace.json` under `plugins[]`
+4. Update VERSION and all version fields
