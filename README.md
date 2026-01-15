@@ -1,33 +1,45 @@
-# Holepunch P2P Development Plugin
+# Holepunch P2P Development Marketplace
 
-A Claude Code plugin for building zero-infrastructure peer-to-peer applications using the Holepunch ecosystem.
+A Claude Code marketplace providing plugins for building zero-infrastructure peer-to-peer applications using the Holepunch ecosystem.
 
-## Features
+## Installation
 
+### From GitHub Marketplace
+
+```bash
+# In Claude Code, install the marketplace and plugin:
+# "Install holepunch from github:grandcamel/holepunch-plugin"
+```
+
+### Manual Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/grandcamel/holepunch-plugin.git
+
+# Use with Claude Code
+claude --plugin-dir ./holepunch-plugin/plugins/holepunch
+```
+
+## Plugins
+
+### holepunch
+
+Build zero-infrastructure P2P applications with the Holepunch ecosystem.
+
+**Features:**
 - **Skill**: Comprehensive guidance for Holepunch/Pear development
 - **Commands**: Scaffold apps, debug issues, select modules
 - **Agents**: Proactive code review and troubleshooting
 
-## Installation
-
-```bash
-# Use directly with Claude Code
-claude --plugin-dir /path/to/holepunch-dev
-
-# Or copy to your project
-cp -r holepunch-dev/.claude-plugin your-project/
-```
-
-## Components
-
-### Skill: Holepunch P2P Development
+#### Skill: Holepunch P2P Development
 
 Activates when you:
 - Ask to "create a P2P app" or "build with Holepunch"
 - Mention Hypercore, Hyperswarm, Hyperdrive, Hyperbee
 - Work with Pear, Bare, HyperDHT, Autobase, or Corestore
 
-### Commands
+#### Commands
 
 | Command | Description |
 |---------|-------------|
@@ -35,7 +47,7 @@ Activates when you:
 | `/holepunch:debug` | Debug P2P connectivity issues |
 | `/holepunch:modules` | Quick module selection guide |
 
-### Agents
+#### Agents
 
 | Agent | Triggers When |
 |-------|---------------|
@@ -54,9 +66,31 @@ Activates when you:
 | Multiple writers | Autobase |
 | Manage many cores | Corestore |
 
+## Project Structure
+
+```
+holepunch-plugin/
+├── .claude-plugin/
+│   └── marketplace.json      # Marketplace metadata
+├── plugins/
+│   └── holepunch/
+│       ├── .claude-plugin/
+│       │   └── plugin.json   # Plugin metadata
+│       ├── commands/         # Slash commands
+│       ├── agents/           # Autonomous agents
+│       └── skills/
+│           └── holepunch/    # P2P development skill
+│               ├── SKILL.md
+│               ├── references/
+│               ├── examples/
+│               └── scripts/
+├── README.md
+└── LICENSE
+```
+
 ## Examples
 
-Working examples in `examples/`:
+Working examples in `plugins/holepunch/skills/holepunch/examples/`:
 
 - `hyperswarm-basic.js` - Peer discovery and messaging
 - `hypercore-replication.js` - Data sharing between peers
@@ -64,7 +98,7 @@ Working examples in `examples/`:
 
 ## Reference Documentation
 
-Detailed docs in `skills/holepunch/references/`:
+Detailed docs in `plugins/holepunch/skills/holepunch/references/`:
 
 - `modules.md` - Complete module API reference
 - `platforms.md` - Desktop, terminal, mobile guidance
@@ -85,3 +119,7 @@ For deeper API documentation, query your Pear P2P Platform notebook:
 - [Pear Documentation](https://docs.pears.com)
 - [Holepunch Documentation](https://docs.holepunch.to)
 - [GitHub](https://github.com/holepunchto)
+
+## License
+
+MIT

@@ -1,0 +1,35 @@
+{
+  "name": "holepunch-marketplace",
+  "owner": {
+    "name": "grandcamel"
+  },
+  "metadata": {
+    "description": "Plugins for building zero-infrastructure P2P applications with the Holepunch ecosystem (Pear, Hypercore, Hyperswarm, Hyperdrive, Hyperbee)",
+    "version": "1.1.0",
+    "homepage": "https://github.com/grandcamel/holepunch-plugin",
+    "repository": "https://github.com/grandcamel/holepunch-plugin",
+    "license": "MIT"
+  },
+  "plugins": [
+    {
+      "name": "holepunch",
+      "source": "./plugins/holepunch",
+      "description": "Build zero-infrastructure P2P applications with Holepunch ecosystem - includes skill, commands, and code review agents",
+      "version": "1.1.0",
+      "category": "development",
+      "keywords": [
+        "p2p",
+        "peer-to-peer",
+        "holepunch",
+        "pear",
+        "hypercore",
+        "hyperswarm",
+        "hyperdrive",
+        "hyperbee"
+      ],
+      "author": {
+        "name": "grandcamel"
+      }
+    }
+  ]
+}
