@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Plugin local settings (user-specific)
+.claude/*.local.md
+
+# Storage directories (from examples)
+storage/
+my-data/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
